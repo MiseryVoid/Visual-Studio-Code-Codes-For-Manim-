@@ -1,0 +1,46 @@
+from manim import *
+
+class test3(Scene):
+    def construct(self):
+        t = Text("") # your own custom word
+        t2 = Text("").shift(ORIGIN) # your own custom word
+        t3 = Text("").shift(ORIGIN) # your own custom word
+        t4 = Text("").shift(ORIGIN) # your own custom word
+        t5 = Text("").shift(ORIGIN) # your own custom word
+        t6 = Text("Visual Studio Code").shift(ORIGIN)
+
+        img = SVGMobject(r"").shift(UP*2)  # your own custom image must be an svg
+        img2 = SVGMobject(r"").shift(UP*2)  # your own custom image must be an svg
+        img3 = SVGMobject(r"").shift(UP*2) # your own custom image must be an svg
+        img4 = SVGMobject(r"").shift(UP*2) # your own custom image must be an svg
+        img5 = SVGMobject(r"C:\Users\aisti\manimations\ICONS\Visual_Studio_Code_1.35_icon.svg")
+
+        img.scale(1)
+        img2.scale(1)
+        img3.scale(1)
+        img4.scale(1)
+        self.play(Write(t))
+        self.wait(2)
+        
+        self.play(FadeOut(t))
+        self.play(Write(t2))
+        self.play(Create(img))
+        self.wait(2)
+        
+        self.play(FadeOut(t2), FadeOut(img))
+        self.play(Write(t3))
+        self.play(Create(img2))
+        self.wait(2)
+        
+        self.play(FadeOut(t3), FadeOut(img2))
+        self.play(Write(t4))
+        self.play(Create(img3))
+        
+        self.play(FadeOut(t4), FadeOut(img3))
+        self.play(Write(t5))
+        self.play(Create(img4))
+
+        self.play(FadeOut(t5), FadeOut(img4))
+        self.play(Create(img5))
+        self.play(img5.animate.move_to(UP*2), run_time=1)
+        self.play(Write(t6))
