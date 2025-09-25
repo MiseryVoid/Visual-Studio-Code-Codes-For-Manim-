@@ -13,7 +13,7 @@ class test3(Scene):
         img2 = SVGMobject(r"").shift(UP*2)  # your own custom image must be an svg
         img3 = SVGMobject(r"").shift(UP*2) # your own custom image must be an svg
         img4 = SVGMobject(r"").shift(UP*2) # your own custom image must be an svg
-        img5 = SVGMobject(r"C:\Users\aisti\manimations\ICONS\Visual_Studio_Code_1.35_icon.svg")
+        img5 = SVGMobject(r"C:\Users\<your name>\manimations\ICONS\Visual_Studio_Code_1.35_icon.svg")
 
         img.scale(1)
         img2.scale(1)
